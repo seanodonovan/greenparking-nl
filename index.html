@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenParking Schiphol - Goedkoop en Veilig Parkeren</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <div class="topbar-left">
+                <span class="topbar-item">
+                    <strong>Telefoon:</strong> <a href="tel:+31202376622">020 â 237 66 22</a>
+                </span>
+                <span class="topbar-item">
+                    <strong>E-mail:</strong> <a href="mailto:info@greenparking.eu">info@greenparking.eu</a>
+                </span>
+            </div>
+            <div class="topbar-right">
+                <span>24/7 Shuttle Service | Veilig Parkeren</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1>GreenParking Schiphol</h1>
+            </div>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="parkeren-bij-schiphol.html">Parkeren</a></li>
+                    <li><a href="shuttle-service.html">Shuttle Service</a></li>
+                    <li><a href="locaties.html">Locaties</a></li>
+                    <li><a href="tarieven.html">Tarieven</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="klantenservice.html">Klantenservice</a></li>
+                    <li><a href="reserveren.html" class="btn-reserveren">Reserveren</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" id="mobileNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parkeren-bij-schiphol.html">Parkeren</a></li>
+            <li><a href="shuttle-service.html">Shuttle Service</a></li>
+            <li><a href="locaties.html">Locaties</a></li>
+            <li><a href="tarieven.html">Tarieven</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="klantenservice.html">Klantenservice</a></li>
+            <li><a href="reserveren.html" class="btn-reserveren">Reserveren</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Goedkoop en Veilig Parkeren bij Schiphol</h1>
+            <p>Reserveer nu en bespaar tot 40% op reguliere parkeertarieven</p>
+            <a href="reserveren.html" class="btn btn-primary">Direct Reserveren</a>
+        </div>
+    </section>
+
+    <!-- Quick Booking Widget -->
+    <section class="booking-widget">
+        <div class="container">
+            <h2>Snel Boeken</h2>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="parkingType">Parkeertype</label>
+                    <select id="parkingType" required>
+                        <option value="">Selecteer type</option>
+                        <option value="shuttle">Shuttle Parking - â¬7.95/dag</option>
+                        <option value="valet">Valet Parking - â¬12.95/dag</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="startDate">Startdatum</label>
+                    <input type="datetime-local" id="startDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="endDate">Einddatum</label>
+                    <input type="datetime-local" id="endDate" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Doorsturen naar Reservering</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Waarom GreenParking Schiphol?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>24/7 Shuttle Service</h3>
+                    <p>Gratis shuttle naar Schiphol, elke 20 minuten. Slechts 10 minuten reistijd.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Veilig en Beveiligd</h3>
+                    <p>24 uur bewaking, camera's en verlichte parkeerplaatsen. Uw auto is in goede handen.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Goedkope Tarieven</h3>
+                    <p>Tot 40% goedkoper dan reguliere Schiphol parkeertarieven. Zonder verstopte kosten.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Gemakkelijk Reserveren</h3>
+                    <p>Boek online in 2 minuten. Geen gedoe, geen lange wachtrijen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h4>GreenParking Schiphol</h4>
+                <p>Middenweg 7<br>1432 DE Aalsmeer</p>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p>Telefoon: <a href="tel:+31202376622">020 â 237 66 22</a><br>
+                E-mail: <a href="mailto:info@greenparking.eu">info@greenparking.eu</a></p>
+            </div>
+            <div class="footer-column">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="klantenservice.html">Klantenservice</a></li>
+                    <li><a href="tarieven.html">Tarieven</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Volg Ons</h4>
+                <p>Blijf op de hoogte van onze aanbiedingen en service.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GreenParking Schiphol. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

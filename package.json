@@ -1,0 +1,1 @@
+{"name":"greenparking-schiphol","version":"1.0.0","scripts":{"start":"npx live-server --port=8080"}}
