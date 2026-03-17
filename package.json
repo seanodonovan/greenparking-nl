@@ -1,1 +1,11 @@
-{"name":"greenparking-schiphol","version":"1.0.0","scripts":{"start":"npx live-server --port=8080"}}
+{
+  "name": "greenparking-schiphol",
+  "version": "1.0.0",
+  "description": "GreenParking Schiphol - Voordelig Parkeren bij Schiphol",
+  "scripts": {
+    "start": "npx live-server --port=8080 --no-browser",
+    "dev": "npx live-server --port=8080 --no-browser"
+  },
+  "keywords": ["parking", "schiphol", "greenparking"],
+  "license": "PRIVATE"
+}
