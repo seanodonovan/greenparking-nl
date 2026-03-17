@@ -3,49 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shuttle Service - GreenParking Schiphol</title>
+    <meta name="description" content="Parkeren met gratis shuttle service. GreenParking biedt 24/7 shuttlebussen naar Schiphol. Veilig, betrouwbaar en voordelig.">
+    <meta name="keywords" content="shuttle service schiphol, gratis shuttle, parkeren shuttle">
+    <title>Parkeren met shuttle service | GreenParking Schiphol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Topbar -->
-    <div class="topbar">
-        <div class="container topbar-content">
-            <div class="topbar-left">
-                <span class="topbar-item">
-                    <strong>Telefoon:</strong> <a href="tel:+31202376622">020 â 237 66 22</a>
-                </span>
-                <span class="topbar-item">
-                    <strong>E-mail:</strong> <a href="mailto:info@greenparking.eu">info@greenparking.eu</a>
-                </span>
-            </div>
-            <div class="topbar-right">
-                <span>24/7 Shuttle Service | Veilig Parkeren</span>
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="top-nav-links">
+                <a href="over-greenparking-schiphol.html">Over GreenParking Schiphol</a>
+                <a href="klantenservice.html">Klantenservice</a>
+                <a href="faq.html">Veelgestelde vragen</a>
+                <a href="contact.html">Contact</a>
             </div>
         </div>
     </div>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container header-content">
-            <div class="logo">
-                <h1>GreenParking Schiphol</h1>
-            </div>
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="45" height="40" viewBox="0 0 45 40">
+                        <text x="0" y="15" font-size="14" font-weight="bold" fill="#88BC24">GREEN</text>
+                        <text x="0" y="28" font-size="14" font-weight="bold" fill="#88BC24">PARKING</text>
+                        <text x="0" y="38" font-size="9" fill="#0D2C54" letter-spacing="2">SCHIPHOL</text>
+                        <g transform="translate(32, 0)">
+                            <rect x="0" y="8" width="12" height="22" rx="2" fill="#0D2C54"/>
+                            <text x="2" y="24" font-size="14" font-weight="bold" fill="white">P</text>
+                            <path d="M6 8 L6 2 L12 5 L6 8" fill="#0D2C54"/>
+                        </g>
+                    </svg>
+                </div>
+            </a>
             <nav class="nav-desktop">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="parkeren-bij-schiphol.html">Parkeren</a></li>
-                    <li><a href="shuttle-service.html">Shuttle Service</a></li>
-                    <li><a href="locaties.html">Locaties</a></li>
+                    <li><a href="parkeren-bij-schiphol.html">Parkeren Schiphol</a></li>
                     <li><a href="tarieven.html">Tarieven</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="klantenservice.html">Klantenservice</a></li>
-                    <li><a href="reserveren.html" class="btn-reserveren">Reserveren</a></li>
+                    <li><a href="shuttle-service.html">Shuttle service</a></li>
+                    <li><a href="bustijden.html">Shuttlebus tijden</a></li>
+                    <li><a href="locaties.html">Locaties</a></li>
+                    <li><a href="reserveren.html" class="btn btn-primary nav-cta">Reserveer mijn plek</a></li>
                 </ul>
             </nav>
-            <button class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </header>
@@ -53,259 +58,229 @@
     <!-- Mobile Navigation -->
     <nav class="nav-mobile" id="mobileNav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="parkeren-bij-schiphol.html">Parkeren</a></li>
-            <li><a href="shuttle-service.html">Shuttle Service</a></li>
-            <li><a href="locaties.html">Locaties</a></li>
+            <li><a href="parkeren-bij-schiphol.html">Parkeren Schiphol</a></li>
             <li><a href="tarieven.html">Tarieven</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="klantenservice.html">Klantenservice</a></li>
-            <li><a href="reserveren.html" class="btn-reserveren">Reserveren</a></li>
+            <li><a href="shuttle-service.html">Shuttle service</a></li>
+            <li><a href="bustijden.html">Shuttlebus tijden</a></li>
+            <li><a href="locaties.html">Locaties</a></li>
+            <li><a href="reserveren.html" class="btn btn-primary">Reserveer mijn plek</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-alt">
-        <div class="hero-content">
-            <h1>Shuttle Service</h1>
-            <p>24/7 Gratis Shuttle naar Schiphol</p>
-        </div>
-    </section>
-
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="index.html">Home</a> / <span>Shuttle Service</span>
-        </div>
-    </div>
+    <!-- Green Line -->
+    <div class="green-line"></div>
 
     <!-- Main Content -->
-    <section class="main-content">
-        <div class="container">
-            <div class="content-section">
-                <h2>Onze Shuttle Service</h2>
-                <p>GreenParking biedt een gratis 24/7 shuttle service naar Schiphol Airport. Onze moderne, comfortabele buses rijden regelmatig heen en weer tussen onze parkeerlocaties in Aalsmeer en de terminal van Schiphol.</p>
-            </div>
-
-            <div class="shuttle-highlights">
-                <h2>Highlights van Onze Shuttle Service</h2>
-                <div class="highlights-grid">
-                    <div class="highlight-card">
-                        <h3>24/7 Beschikbaar</h3>
-                        <p>Onze shuttle service draait dag en nacht. Vroege vlucht om 6 uur 's ochtends? Laat vlucht om 23 uur 's avonds? Geen probleem!</p>
-                    </div>
-                    <div class="highlight-card">
-                        <h3>Elke 20 Minuten</h3>
-                        <p>Bussen vertrekken om de 20 minuten van onze parkeerlocaties. Nooit lang wachten op uw shuttle.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <h3>Slechts 10 Minuten</h3>
-                        <p>De rit naar Schiphol duurt gemiddeld slechts 10 minuten. Snel en efficiÃ«nt.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <h3>Moderne Voertuigen</h3>
-                        <p>Onze bussen zijn voorzien van comfortabele stoelen, verwarming/airconditioning en gratis WiFi.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <h3>Gratis voor Iedereen</h3>
-                        <p>De shuttle service is volledig gratis. Geen extra kosten, geen verborgen toeslagen.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <h3>Professionele Chauffeurs</h3>
-                        <p>Onze chauffeurs zijn ervaren en veilig. Zij kennen de routes op hun duimpje.</p>
-                    </div>
+    <main>
+        <!-- Intro Section -->
+        <section class="intro-section" style="background-color: #EBF2FA;">
+            <div class="container">
+                <h1>Parkeren met <em>gratis</em> Schiphol shuttle service</h1>
+                <p>Ideale locaties aan de N201 in Aalsmeer, slechts 10 minuten van Schiphol. Onze shuttle service rijdt 24/7 en rijdt u comfortabel naar de luchthaven. Wacht nooit langer dan 20 minuten op een shuttle naar Schiphol.</p>
+                <div style="margin-top: 30px; text-align: center;">
+                    <div class="shuttle-illustration" style="font-size: 64px; margin-bottom: 15px;">🚌</div>
+                    <p style="font-size: 14px; color: #666;">24/7 Shuttlebus service naar Schiphol</p>
                 </div>
             </div>
+        </section>
 
-            <div class="route-info">
-                <h2>Routekaart</h2>
-                <div class="route-section">
-                    <div class="route-map-placeholder">
-                        <p>[Routekaart: Aalsmeer via N201 naar Schiphol]</p>
-                    </div>
-                    <div class="route-details">
-                        <h3>Route Details</h3>
-                        <ul>
-                            <li><strong>Vertrekpunt:</strong> GreenParking Locatie M en K, Middenweg, Aalsmeer</li>
-                            <li><strong>Route:</strong> N201 richting Amsterdam/Schiphol</li>
-                            <li><strong>Bestemming:</strong> Schiphol Airport Terminal</li>
-                            <li><strong>Reistijd:</strong> Circa 10 minuten (zonder file)</li>
-                            <li><strong>Frequentie:</strong> Elke 20 minuten (24/7)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="how-it-works">
-                <h2>Hoe Werkt de Shuttle Service?</h2>
-                <div class="steps-detailed">
-                    <div class="step-detailed">
+        <!-- How Shuttle Works -->
+        <section class="shuttle-works-section">
+            <div class="container">
+                <h2>Zow werkt de Schiphol <em>shuttle service</em></h2>
+                <p>Parkeer uw auto bij GreenParking en genier onze gratis shuttle service naar Schiphol. Eenvoudig, veilig en altijd beschikbaar.</p>
+                <div class="shuttle-process">
+                    <div class="process-step">
                         <div class="step-number">1</div>
-                        <h3>Boek Online</h3>
-                        <p>Reserveer uw parkeerplaats en shuttle service online. Voer uw vluchtgegevens in voor nauwkeurige timing.</p>
+                        <h3>Parkeer uw auto</h3>
+                        <p>Park veilig op éꀨΩ van onze goed verlichte en beveiligde terreinen</p>
                     </div>
-                    <div class="step-detailed">
+                    <div class="process-step">
                         <div class="step-number">2</div>
-                        <h3>Kom Aan bij Parkeerlocatie</h3>
-                        <p>Rijd naar onze parkeerlocatie in Aalsmeer. Volg de groene GreenParking signs van de N201.</p>
-                    </div>
-                    <div class="step-detailed">
-                        <div class="step-number">3</div>
                         <h3>Check-in</h3>
-                        <p>Presenteer uw boekingsconfirmatie en rijbewijs bij onze receptie. Ontvang uw parkeerticket.</p>
+                        <p>Presenteer uk reservering bij onze receptie</p>
                     </div>
-                    <div class="step-detailed">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Wacht op shuttle</h3>
+                        <p>Ontspan in onze lounge, maximum 20 minuten wachten</p>
+                    </div>
+                    <div class="process-step">
                         <div class="step-number">4</div>
-                        <h3>Park Uw Auto</h3>
-                        <p>Park uw voertuig op de aangewezen parkeerplaats. Alle parkeerplaatsen zijn beveiligd en verlicht.</p>
-                    </div>
-                    <div class="step-detailed">
-                        <div class="step-number">5</div>
-                        <h3>Wacht op Shuttle</h3>
-                        <p>Ga naar het shuttle lounge area. Koffie en drankjes beschikbaar. De shuttle vertrekt elke 20 minuten.</p>
-                    </div>
-                    <div class="step-detailed">
-                        <div class="step-number">6</div>
-                        <h3>Geniet van de Rit</h3>
-                        <p>Ontspan in onze comfortabele shuttle. WiFi en komfortabele zitplaatsen beschikbaar. Binnen 10 minuten bent u bij Schiphol.</p>
-                    </div>
-                    <div class="step-detailed">
-                        <div class="step-number">7</div>
-                        <h3>Retourneer met Shuttle</h3>
-                        <p>Na uw vlucht, neem dezelfde shuttle service terug. Terug naar uw auto in Aalsmeer.</p>
+                        <h3>Rij naar Schiphol</h3>
+                        <p>Geniet van de comfortable ret tow Schiphol (10 minuten)</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="schedule-section">
-                <h2>Dienstschema</h2>
-                <p>Onze shuttle service draait 24 uur per dag, 7 dagen per week. Bussen vertrekken om de 20 minuten van beide locaties.</p>
-                
-                <div class="timetable">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Uren</th>
-                                <th>Frequentie</th>
-                                <th>Vertrekpunten</th>
-                                <th>Reistijd Schiphol</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>00:00 - 06:00 (Nacht)</td>
-                                <td>Om de 20 minuten</td>
-                                <td>Locatie M & K</td>
-                                <td>10 minuten</td>
-                            </tr>
-                            <tr>
-                                <td>06:00 - 10:00 (Ochtend)</td>
-                                <td>Om de 15 minuten</td>
-                                <td>Locatie M & K</td>
-                                <td>10 minuten</td>
-                            </tr>
-                            <tr>
-                                <td>10:00 - 18:00 (Dag)</td>
-                                <td>Om de 20 minuten</td>
-                                <td>Locatie M & K</td>
-                                <td>10 minuten</td>
-                            </tr>
-                            <tr>
-                                <td>18:00 - 22:00 (Avond)</td>
-                                <td>Om de 15 minuten</td>
-                                <td>Locatie M & K</td>
-                                <td>10 minuten</td>
-                            </tr>
-                            <tr>
-                                <td>22:00 - 00:00 (Laat)</td>
-                                <td>Om de 20 minuten</td>
-                                <td>Locatie M & K</td>
-                                <td>10 minuten</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p style="margin-top: 20px; font-style: italic;">Let op: Reistijden kunnen variÃ«ren afhankelijk van verkeerscondities. We adviseren altijd minimaal 2 uur voor uw vluchtvertrek aan te komen.</p>
-            </div>
-
-            <div class="shuttle-amenities">
-                <h2>Voorzieningen in de Shuttle</h2>
-                <div class="amenities-grid">
-                    <div class="amenity-item">
-                        <h3>Comfortabele Stoelen</h3>
-                        <p>Extra brede zitplaatsen voor maximaal comfort during uw rit naar Schiphol.</p>
+        <!-- Benefits Chocklist -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2>Betrouwbaar en comfortable reizen</h2>
+                <div class="benefits-checklist">
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span>Goedkoper dan parkeren op Schiphol</span>
                     </div>
-                    <div class="amenity-item">
-                        <h3>Gratis WiFi</h3>
-                        <p>Blijf verbonden met snel en betrouwbaar internet tijdens uw shuttle rit.</p>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span>24/7 gratis shuttlebus</span>
                     </div>
-                    <div class="amenity-item">
-                        <h3>Klimaatbeheersing</h3>
-                        <p>Verwarming 's winters en airconditioning 's zomers voor uw comfort.</p>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span>Geen extra kosten na boeken</span>
                     </div>
-                    <div class="amenity-item">
-                        <h3>Lounge Area</h3>
-                        <p>Gemakkelijk wachtgebied met zitplaatsen en beschikbaarheid van dranken.</p>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span>Volledig geasfalteerd en verlicht</span>
                     </div>
-                    <div class="amenity-item">
-                        <h3>Uitneembare Bagage</h3>
-                        <p>Meer dan voldoende ruimte voor koffers en bagage van alle passagiers.</p>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span>24/7 geopend op locatie</span>
                     </div>
-                    <div class="amenity-item">
-                        <h3>Live Tracking</h3>
-                        <p>Volg uw shuttle in realtime via onze mobiele app (waar beschikbaar).</p>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span>Handig koffer uitlaadpunt bij de ingang</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span>Op 10 minuten afstand van Schiphol</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span>Autosleutel zelf meenemem</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="content-section">
-                <h2>Waarom Kiezen voor GreenParking Shuttle?</h2>
-                <p>Onze shuttle service biedt het perfecte evenwicht tussen comfort, betrouwbaarheid en waarde. Geen gedoe met parkeren in drukke parkeergarages. Geen lange wandelingen van parkeerplaats naar terminal. Geen stress over verkeersopstoppingen en te laat aankomst.</p>
-                <p>Met GreenParking shuttle service kunt u zich ontspannen en uw reis voorbereiden terwijl wij de rest verzorgen.</p>
+        <!-- Stat Boxes -->
+        <section class="stat-boxes-section">
+            <div class="container">
+                <div class="stat-box">
+                    <div class="stat-icon">🔒</div>
+                    <h3>Veilig parkeren</h3>
+                    <p>24/7 camerabewaking en beveiligde parkeerplaatsen</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">🚌</div>
+                    <h3>Gratis shuttle service</h3>
+                    <p>Beschikbaar 24 uur per dag, 7 dagen per week</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">📞</div>
+                    <h3>24/7 bereikbaar</h3>
+                    <p>Bel ons altijd voor hulp of opschivingugen</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Banner -->
-    <section class="cta-banner">
-        <div class="container">
-            <h2>Maak Vandaag Nog Gebruik van Onze Shuttle Service</h2>
-            <p>Reserveer uw parkeerplaats en shuttle service nu</p>
-            <a href="reserveren.html" class="btn btn-primary btn-large">Direct Reserveren</a>
+        <!-- Location CTA Section -->
+        <section class="location-cta-section" style="background-color: #EBF2FA;">
+            <div class="container text-center">
+                <h2>Parkeerterreinen met shuttle service</h2>
+                <p>Twee terreinen gelegen aan de Middenweg in Aalsmeer direct langs de N201 bij afslag Green Park Aalsmeer. Al 240.000 bezoekers gingen je al voor!</p>
+                <a href="reserveren.html" class="btn btn-primary btn-large">Check online beschikbaarheid &rarr;</a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Hulp nodig? Bekijk de veelgestelde vragen of neem contact op</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Hoe bereik ik de parkeerlocatie?</h3>
+                        <p>Volg de duidelijke groene GreenParking borden van de N201. Beide locaties aan de Middenweg in Aalsmeer zijn gemakkelijk bereikbaar.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Wat zijn de busdiensten 's nachts?</h3>
+                        <p>Onze shuttlebus rijdt 24 uur per dag, ook 's nachts. Bussen vertrekken om de 20 minuten. U hoeft nooit langer dan 20 minuten te wchten.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is de shuttle altijd beschikbaar?</h3>
+                        <p>Ja, onze shuttle service werkt 24/7 7f per week. We rijden ook op feestdagen met dezelfde regelmaat.</p>
+                    </div>
+                </div>
+                <div class="faq-buttons">
+                    <a href="faq.html" class="btn btn-secondary">Alle veelgestelde vragen</a>
+                    <a href="contact.html" class="btn btn-primary">Contact otnemen</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2>Wat klanten zeggen over GreenParking</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <p>"De shuttle service is echT geweldig. Snel, comfortabel en gratis! Veel beter dan zelf parkeren op Schiphol."</p>
+                        <footer>— Karel Koopstra</footer>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Heel fijne ervaring. De chauffeurs zijn vriendelijk en Ä bussen zijn schoon en comfortable. Zeir een aanrade!"</p>
+                        <footer>— Ersin S.</footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pre-footer CTA -->
+    <section class="prefooter-cta">
+        <div class="container text-center">
+            <h3>Check online beschikbaarheid en reserveer</h3>
+            <a href="reserveren.html" class="btn btn-primary btn-large">Reserveer mijn plek &rarr;</a>
+            <div class="prefooter-features">
+                <div class="prefooter-feature">
+                    <span class="checkmark-icon">&#10003;</span>
+                    <span>240.000 reizigers gingen jou voor</span>
+                </div>
+                <div class="prefooter-feature">
+                    <span class="checkmark-icon">&#10003;</span>
+                    <span>gratis 24/7 shuttlebussen</span>
+                </div>
+                <div class="prefooter-feature">
+                    <span class="checkmark-icon">&#10003;</span>
+                    <span>24/7 bemand met parkeerbeheerder</span>
+                </div>
+                <div class="prefooter-feature">
+                    <span class="checkmark-icon">&#10003;</span>
+                    <span>autosleutels neem je zelf mee</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-column">
-                <h4>GreenParking Schiphol</h4>
-                <p>Middenweg 7<br>1432 DE Aalsmeer</p>
+            <div class="footer-logo">
+                <svg width="120" height="55" viewBox="0 0 120 55">
+                    <text x="0" y="18" font-size="16" font-weight="bold" fill="#88BC24">GREEN</text>
+                    <text x="62" y="12" font-size="10" fill="#0D2C54">&#9992;</text>
+                    <text x="0" y="35" font-size="16" font-weight="bold" fill="#88BC24">PARKING</text>
+                    <text x="75" y="35" font-size="18" font-weight="bold" fill="#0D2C54">P</text>
+                    <text x="0" y="50" font-size="10" fill="#0D2C54" letter-spacing="3">SCHIPHOL</text>
+                </svg>
             </div>
-            <div class="footer-column">
-                <h4>Contact</h4>
-                <p>Telefoon: <a href="tel:+31202376622">020 â 237 66 22</a><br>
-                E-mail: <a href="mailto:info@greenparking.eu">info@greenparking.eu</a></p>
+            <div class="footer-airport">
+                <select class="airport-select">
+                    <option>Schiphol (AMS)</option>
+                </select>
+                <p class="footer-small">Ga naar een andere luchthaven</p>
             </div>
-            <div class="footer-column">
-                <h4>Service</h4>
-                <ul>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="klantenservice.html">Klantenservice</a></li>
-                    <li><a href="tarieven.html">Tarieven</a></li>
-                </ul>
+            <div class="footer-links">
+                <a href="#">Algemene voorwaarden</a>
+                <a href="#">Privacy</a>
+                <a href="#">Webdesign</a>
             </div>
-            <div class="footer-column">
-                <h4>Volg Ons</h4>
-                <p>Blijf op de hoogte van onze aanbiedingen en service.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 GreenParking Schiphol. Alle rechten voorbehouden.</p>
         </div>
     </footer>
 
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll naar boven">&#8679;</button>
     <script src="js/main.js"></script>
 </body>
 </html>

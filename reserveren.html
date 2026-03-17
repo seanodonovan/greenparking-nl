@@ -3,49 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserveren GreenParking Schiphol</title>
+    <meta name="description" content="Reserveer uw parkeerplaats bij GreenParking Schiphol. Eenvoudig online reserveren met gratis shuttle service.">
+    <meta name="keywords" content="reserveer parkeren schiphol, online reservering">
+    <title>Reserveren | GreenParking Schiphol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Topbar -->
-    <div class="topbar">
-        <div class="container topbar-content">
-            <div class="topbar-left">
-                <span class="topbar-item">
-                    <strong>Telefoon:</strong> <a href="tel:+31202376622">020 â 237 66 22</a>
-                </span>
-                <span class="topbar-item">
-                    <strong>E-mail:</strong> <a href="mailto:info@greenparking.eu">info@greenparking.eu</a>
-                </span>
-            </div>
-            <div class="topbar-right">
-                <span>24/7 Shuttle Service | Veilig Parkeren</span>
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="top-nav-links">
+                <a href="over-greenparking-schiphol.html">Over GreenParking Schiphol</a>
+                <a href="klantenservice.html">Klantenservice</a>
+                <a href="faq.html">Veelgestelde vragen</a>
+                <a href="contact.html">Contact</a>
             </div>
         </div>
     </div>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container header-content">
-            <div class="logo">
-                <h1>GreenParking Schiphol</h1>
-            </div>
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="45" height="40" viewBox="0 0 45 40">
+                        <text x="0" y="15" font-size="14" font-weight="bold" fill="#88BC24">GREEN</text>
+                        <text x="0" y="28" font-size="14" font-weight="bold" fill="#88BC24">PARKING</text>
+                        <text x="0" y="38" font-size="9" fill="#0D2C54" letter-spacing="2">SCHIPHOL</text>
+                        <g transform="translate(32, 0)">
+                            <rect x="0" y="8" width="12" height="22" rx="2" fill="#0D2C54"/>
+                            <text x="2" y="24" font-size="14" font-weight="bold" fill="white">P</text>
+                            <path d="M6 8 L6 2 L12 5 L6 8" fill="#0D2C54"/>
+                        </g>
+                    </svg>
+                </div>
+            </a>
             <nav class="nav-desktop">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="parkeren-bij-schiphol.html">Parkeren</a></li>
-                    <li><a href="shuttle-service.html">Shuttle Service</a></li>
-                    <li><a href="locaties.html">Locaties</a></li>
+                    <li><a href="parkeren-bij-schiphol.html">Parkeren Schiphol</a></li>
                     <li><a href="tarieven.html">Tarieven</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="klantenservice.html">Klantenservice</a></li>
-                    <li><a href="reserveren.html" class="btn-reserveren">Reserveren</a></li>
+                    <li><a href="shuttle-service.html">Shuttle service</a></li>
+                    <li><a href="bustijden.html">Shuttlebus tijden</a></li>
+                    <li><a href="locaties.html">Locaties</a></li>
+                    <li><a href="reserveren.html" class="btn btn-primary nav-cta">Reserveer mijn plek</a></li>
                 </ul>
             </nav>
-            <button class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </header>
@@ -53,120 +58,228 @@
     <!-- Mobile Navigation -->
     <nav class="nav-mobile" id="mobileNav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="parkeren-bij-schiphol.html">Parkeren</a></li>
-            <li><a href="shuttle-service.html">Shuttle Service</a></li>
-            <li><a href="locaties.html">Locaties</a></li>
+            <li><a href="parkeren-bij-schiphol.html">Parkeren Schiphol</a></li>
             <li><a href="tarieven.html">Tarieven</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="klantenservice.html">Klantenservice</a></li>
-            <li><a href="reserveren.html" class="btn-reserveren">Reserveren</a></li>
+            <li><a href="shuttle-service.html">Shuttle service</a></li>
+            <li><a href="bustijden.html">Shuttlebus tijden</a></li>
+            <li><a href="locaties.html">Locaties</a></li>
+            <li><a href="reserveren.html" class="btn btn-primary">Reserveer mijn plek</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Gemakkelijk Uw Parkervlicht Reserveren</h1>
-            <p>Heme kan u in seconden uw parkeervlicht reserveren</p>
-        </div>
-    </section>
-
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="index.html">Home</a> / <span>Reserveren</span>
-        </div>
-    </div>
+    <!-- Green Line -->
+    <div class="green-line"></div>
 
     <!-- Main Content -->
-    <section class="main-content">
-        <div class="container">
-            <h2>Reserveringsformulier</h2>
-            <div class="reservation-form">
-                <form>
-                    <div class="form-group">
-                        <label for="lastname">Naam: *o</label>
-                        <input type="text" id="lastname" name="lastname" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail: *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefoon: *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="arrival">AankomstDate: *</label>
-                        <input type="date" id="arrival" name="arrival" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="departure">Vertrekdatum: *</label>
-                        <input type="date" id="departure" name="departure" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="location">Locatie: *</label>
-                        <select id="location" name="location" required>
-                            <option value="">Select a Location</option>
-                            <option value="M">Locatie M</option>
-                            <option value="K">Locatie K</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="parking-plan">Parkeerplan **</label>
-                        <select id="parking-plan" name="parking-plan" required>
-                            <option value="">Select a Plan</option>
-                            <option value="parking">Standaard Parking</option>
-                            <option value="valet">Valet Parking</option>
-                            <option value="shuttle">Shuttle Only</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Reservering Beartigen</button>
-                </form>
+    <main>
+        <!-- Intro Section -->
+        <section class="intro-section" style="background-color: #EBF2FA;">
+            <div class="container">
+                <h1>Reserveer uw <em>parkeerplaats</em></h1>
+                <p>Boek snel en makkelijk uw parkeerplaats online. Geen gedoe, geen wachtrijen. Binnen minuten bent u klaar!</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Banner -->
-    <section class="cta-banner">
-        <div class="container">
-            <h2>Hebben U Twee Vragen?</h2>
-            <p>Voor verdere informatie en contact, klick or bellen</p>
-            <a href="klantenservice.html" class="btn btn-secondary btn-large">Kontakt</a>
+        <!-- Booking Form Section -->
+        <section class="booking-form-section">
+            <div class="container">
+                <div class="booking-form-wrapper">
+                    <div class="booking-form">
+                        <h2>Uw reservering</h2>
+                        <form class="reservation-form">
+                            <!-- Vertrek Section -->
+                            <div class="form-section">
+                                <h3>Vertrek</h3>
+                                <div class="form-group">
+                                    <label for="departure-date">Vertrekdatum *</label>
+                                    <input type="date" id="departure-date" name="departure-date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="departure-time">Vertrektijd *</label>
+                                    <input type="time" id="departure-time" name="departure-time" required>
+                                </div>
+                            </div>
+
+                            <!-- Return Section -->
+                            <div class="form-section">
+                                <h3>Aankomst</h3>
+                                <div class="form-group">
+                                    <label for="return-date">Aankomstdatum *</label>
+                                    <input type="date" id="return-date" name="return-date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="return-time">Aankomsttijd *</label>
+                                    <input type="time" id="return-time" name="return-time" required>
+                                </div>
+                            </div>
+
+                            <!-- Personal Information -->
+                            <div class="form-section">
+                                <h3>Uw gegevens</h3>
+                                <div class="form-group">
+                                    <label for="name">Volledige naam *</label>
+                                    <input type="text" id="name" name="name" placeholder="Voornaam Achternaam" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mailadres *</label>
+                                    <input type="email" id="email" name="email" placeholder="uw@email.nl" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefoonnummer *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="06 12345678" required>
+                                </div>
+                            </div>
+
+                            <!-- Vehicle Information -->
+                            <div class="form-section">
+                                <h3>Uw voertuig</h3>
+                                <div class="form-group">
+                                    <label for="license-plate">Kenteken *</label>
+                                    <input type="text" id="license-plate" name="license-plate" placeholder="XX-XX-XX" required>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-large" style="width: 100%; background-color: #FF8C00; border: none; cursor: pointer;">Reserveer nu</button>
+                        </form>
+                    </div>
+
+                    <!-- Sidebar Info -->
+                    <div class="booking-sidebar">
+                        <div class="info-box">
+                            <h3>Hoe werkt reserveren?</h3>
+                            <ol style="margin-top: 15px; padding-left: 20px;">
+                                <li>Vul uw gegevens in</li>
+                                <li>Controleer de samenvatting</li>
+                                <li>Betaal veilig online</li>
+                                <li>Ontvang bevestiging per e-mail</li>
+                                <li>Kom naar onze locatie</li>
+                                <li>Geniet van shuttle service naar Schiphol</li>
+                            </ol>
+                        </div>
+                        <div class="info-box" style="margin-top: 20px; background-color: #E8F5E9; border-left: 4px solid #88BC24;">
+                            <h3 style="color: #2E7D32;">Waarom GreenParking?</h3>
+                            <ul style="margin-top: 15px; list-style: none; padding: 0;">
+                                <li style="margin-bottom: 8px;">✓ Goedkoper dan Schiphol parkeren</li>
+                                <li style="margin-bottom: 8px;">✓ Gratis shuttle service 24/7</li>
+                                <li style="margin-bottom: 8px;">✓ Geen verborgen kosten</li>
+                                <li style="margin-bottom: 8px;">✓ Veilig en beveiligd</li>
+                                <li style="margin-bottom: 8px;">✓ Autosleutel bij jezelf</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Info Section -->
+        <section class="booking-info-section" style="background-color: #F5F5F5; padding: 40px 0;">
+            <div class="container">
+                <h2>Informatie over uw reservering</h2>
+                <p>Na het indienen van het formulier ontvangt u een bevestigingsmail met alle details van uw reservering. Deze mail bevat:</p>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>Reserveringsnummer</h3>
+                        <p>Nodig voor check-in op onze locatie</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Parkeerkaart</h3>
+                        <p>Print deze uit of toon op uw telefoon</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Locatieadres</h3>
+                        <p>Precieze routenavigatie informatie</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Bustijden</h3>
+                        <p>Information over shuttle service</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Hulp nodig? Bekijk de veelgestelde vragen of neem contact op</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Wat is shuttle service?</h3>
+                        <p>Onze gratis shuttle service brengt u 24/7 van ons parkeerterrein naar de luchthaven. Geen wachttijden, altijd beschikbaar en volledig inclusief in de parkeerprijs.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Kan ik overdekt parkeren?</h3>
+                        <p>Nee, onze parkeerplatsen zijn volledig geasfalteerd en verlicht. We beschikken over 24/7 camerabewaking voor uw veiligheid en gemoedsrust.</p>
+                    </div>
+                </div>
+                <div class="faq-buttons">
+                    <a href="faq.html" class="btn btn-secondary">Alle veelgestelde vragen</a>
+                    <a href="contact.html" class="btn btn-primary">Contact opnemen</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pre-footer CTA -->
+    <section class="prefooter-cta">
+        <div class="container text-center">
+            <h3>Check online beschikbaarheid en reserveer</h3>
+            <a href="reserveren.html" class="btn btn-primary btn-large">Reserveer mijn plek &rarr;</a>
+            <div class="prefooter-features">
+                <div class="prefooter-feature">
+                    <span class="checkmark-icon">&#10003;</span>
+                    <span>240.000 reizigers gingen jou voor</span>
+                </div>
+                <div class="prefooter-feature">
+                    <span class="checkmark-icon">&#10003;</span>
+                    <span>gratis 24/7 shuttlebussen</span>
+                </div>
+                <div class="prefooter-feature">
+                    <span class="checkmark-icon">&#10003;</span>
+                    <span>24/7 bemand met parkeerbeheerder</span>
+                </div>
+                <div class="prefooter-feature">
+                    <span class="checkmark-icon">&#10003;</span>
+                    <span>autosleutels neem je zelf mee</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-column">
-                <h4>GreenParking Schiphol</h4>
-                <p>Middenweg 7<br>1432 DE Aalsmeer</p>
+            <div class="footer-logo">
+                <svg width="120" height="55" viewBox="0 0 120 55">
+                    <text x="0" y="18" font-size="16" font-weight="bold" fill="#88BC24">GREEN</text>
+                    <text x="62" y="12" font-size="10" fill="#0D2C54">&#9992;</text>
+                    <text x="0" y="35" font-size="16" font-weight="bold" fill="#88BC24">PARKING</text>
+                    <text x="75" y="35" font-size="18" font-weight="bold" fill="#0D2C54">P</text>
+                    <text x="0" y="50" font-size="10" fill="#0D2C54" letter-spacing="3">SCHIPHOL</text>
+                </svg>
             </div>
-            <div class="footer-column">
-                <h4>Contact</h4>
-                <p>Telefoon: <a href="tel:+31202376622">020 â 237 66 22</a><br>
-                E-mail: <a href="mailto:info@greenparking.eu">info@greenparking.eu</a></p>
+            <div class="footer-airport">
+                <select class="airport-select">
+                    <option>Schiphol (AMS)</option>
+                </select>
+                <p class="footer-small">Ga naar een andere luchthaven</p>
             </div>
-            <div class="footer-column">
-                <h4>Service</h4>
-                <ul>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="klantenservice.html">Klantenservice</a></li>
-                    <li><a href="tarieven.html">Tarieven</a></li>
-                </ul>
+            <div class="footer-links">
+                <a href="#">Algemene voorwaarden</a>
+                <a href="#">Privacy</a>
+                <a href="#">Webdesign</a>
             </div>
-            <div class="footer-column">
-                <h4>Volg Ons</h4>
-                <p>Blijf op de hoogte van onze aanbiedingen en service.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 GreenParking Schiphol. Alle rechten voorbehouden.</p>
         </div>
     </footer>
 
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll naar boven">&#8679;</button>
     <script src="js/main.js"></script>
+    <script>
+        document.querySelector('.reservation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Bedankt voor uw reservering! U ontvangt binnenkort een bevestigingsmail.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
