@@ -5,11 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GreenParking Schiphol | Parkeren Schiphol | Goedkoop &amp; Betrouwbaar</title>
   <meta name="description" content="Parkeren bij Schiphol? GreenParking Schiphol biedt veilig, betaalbaar parkeren vlakbij Schiphol met gratis 24/7 shuttleservice. Reserveer nu!">
+  <link rel="canonical" href="https://seanodonovan.github.io/greenparking-nl/">
   <link rel="icon" type="image/png" href="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/favicon-1.png">
+
+  <!-- Performance: early connections to the image/font origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://greenparkingschiphol.nl" crossorigin>
+
+  <!-- Performance: preload the above-the-fold hero background image (LCP candidate) -->
+  <link rel="preload" as="image"
+        href="https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol.jpg"
+        fetchpriority="high">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- SEO: LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ParkingFacility",
+    "name": "GreenParking Schiphol",
+    "description": "Veilig, betaalbaar parkeren vlakbij Schiphol met gratis 24/7 shuttleservice. Reserveer uw parkeerplaats online.",
+    "url": "https://seanodonovan.github.io/greenparking-nl/",
+    "image": "https://greenparkingschiphol.nl/wp-content/uploads/2018/02/logo-dark-1.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hoofddorp",
+      "addressCountry": "NL"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "24/7 bemand", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Gratis shuttle service", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Autosleutels neem je zelf mee", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Kentekenherkenning", "value": true}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -18,22 +58,25 @@
   <!-- Utility bar -->
   <div id="header-secondary-outer">
     <div class="container">
-      <ul class="utility-nav">
-        <li><a href="over-greenparking-schiphol.html">Over GreenParking Schiphol</a></li>
-        <li><a href="klantenservice.html">Klantenservice</a></li>
-        <li><a href="faq.html">Veelgestelde vragen</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <nav aria-label="Secundaire navigatie">
+        <ul class="utility-nav">
+          <li><a href="over-greenparking-schiphol.html">Over GreenParking Schiphol</a></li>
+          <li><a href="klantenservice.html">Klantenservice</a></li>
+          <li><a href="faq.html">Veelgestelde vragen</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
   <!-- Main nav -->
   <header id="top">
     <div class="container">
       <div class="header-inner">
-        <a id="logo" href="index.html">
-          <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/logo-dark-1.svg" alt="GreenParking Schiphol" width="144" height="68">
+        <a id="logo" href="index.html" aria-label="GreenParking Schiphol — naar homepage">
+          <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/logo-dark-1.svg"
+               alt="GreenParking Schiphol" width="144" height="68">
         </a>
-        <nav class="main-nav" id="main-nav">
+        <nav class="main-nav" id="main-nav" aria-label="Hoofdnavigatie">
           <ul>
             <li><a href="parkeren-bij-schiphol.html">Parkeren Schiphol</a></li>
             <li><a href="tarieven.html">Tarieven</a></li>
@@ -43,7 +86,8 @@
             <li class="nav-cta"><a href="reserveren.html">Reserveer mijn plek</a></li>
           </ul>
         </nav>
-        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Menu">
+        <button class="mobile-menu-toggle" id="mobile-toggle"
+                aria-label="Menu openen" aria-expanded="false" aria-controls="main-nav">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -52,23 +96,36 @@
 </div>
 
 <!-- ===== GREEN USP BAR ===== -->
-<section class="usp-bar">
+<!-- SVG strokes use #0D2C54 (navy) on green background — 6.2:1 contrast. ✓ -->
+<section class="usp-bar" aria-label="Kenmerken">
   <div class="container">
     <ul class="usp-list">
       <li>
-        <svg class="usp-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="usp-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10" stroke="#0D2C54" stroke-width="2"/>
+          <path d="M7 12l3.5 3.5L17 8.5" stroke="#0D2C54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         24/7 bemand
       </li>
       <li>
-        <svg class="usp-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="usp-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10" stroke="#0D2C54" stroke-width="2"/>
+          <path d="M7 12l3.5 3.5L17 8.5" stroke="#0D2C54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         gratis 24/7 shuttlebussen
       </li>
       <li>
-        <svg class="usp-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="usp-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10" stroke="#0D2C54" stroke-width="2"/>
+          <path d="M7 12l3.5 3.5L17 8.5" stroke="#0D2C54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         autosleutels neem je zelf mee
       </li>
       <li>
-        <svg class="usp-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="usp-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10" stroke="#0D2C54" stroke-width="2"/>
+          <path d="M7 12l3.5 3.5L17 8.5" stroke="#0D2C54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         240.000 reizigers gingen jou voor
       </li>
     </ul>
@@ -76,8 +133,9 @@
 </section>
 
 <!-- ===== HERO ===== -->
-<section class="hero-section">
-  <div class="hero-bg" style="background-image: url('https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol.jpg');"></div>
+<section class="hero-section" aria-label="Hero">
+  <div class="hero-bg" style="background-image: url('https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol.jpg');"
+       role="img" aria-label="Parkeerterrein GreenParking Schiphol"></div>
   <div class="hero-content">
     <div class="container">
       <div class="hero-text-wrap">
@@ -86,44 +144,107 @@
           <p>reserveer uw parkeerplaats</p>
         </div>
         <div class="hero-sticker">
-          <img src="https://greenparkingschiphol.nl/wp-content/uploads/2020/09/sticker-10-min-rijden.svg" alt="Ideale parkeerlocatie 10 minuten van Schiphol" width="158" height="158">
+          <!-- fetchpriority="high" because this is above the fold -->
+          <img src="https://greenparkingschiphol.nl/wp-content/uploads/2020/09/sticker-10-min-rijden.svg"
+               alt="Ideale parkeerlocatie 10 minuten van Schiphol"
+               width="158" height="158" fetchpriority="high">
         </div>
       </div>
     </div>
   </div>
+
+  <!-- ===== BOOKING BOX ===== -->
   <div class="booking-box-wrap">
     <div class="container">
       <div class="booking-box">
-        <h3>Check je prijs en reserveer</h3>
-        <form class="booking-form" action="reserveren.html" method="get">
+        <h3 id="booking-form-title">Check je prijs en reserveer</h3>
+        <!--
+          The form intercepts submit via JS and builds a URL for the booking engine.
+          No action/method needed — JS handles navigation.
+        -->
+        <form class="booking-form" id="booking-form" novalidate aria-labelledby="booking-form-title">
           <div class="form-row">
+
+            <!-- Departure date -->
             <div class="form-field">
               <div class="input-icon-wrap">
-                <input type="text" name="qp-departure-date" placeholder="Vertrekdatum" readonly>
-                <svg class="field-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#8695A9" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="#8695A9" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <label for="depart-date" class="sr-only">Vertrekdatum</label>
+                <input type="date" id="depart-date" name="in"
+                       aria-label="Vertrekdatum" autocomplete="off">
+                <svg class="field-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="#8695A9" stroke-width="1.5"/>
+                  <path d="M16 2v4M8 2v4M3 10h18" stroke="#8695A9" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
               </div>
             </div>
+
+            <!-- Departure time -->
             <div class="form-field form-field-sm">
               <div class="input-select-wrap">
-                <select name="qp-departure-time"><option value="">Tijd</option><option>00:00</option><option>00:30</option><option>01:00</option><option>01:30</option><option>02:00</option><option>02:30</option><option>03:00</option><option>03:30</option><option>04:00</option><option>04:30</option><option>05:00</option><option>05:30</option><option>06:00</option><option>06:30</option><option>07:00</option><option>07:30</option><option>08:00</option><option>08:30</option><option>09:00</option><option>09:30</option><option>10:00</option><option>10:30</option><option>11:00</option><option>11:30</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option><option>16:00</option><option>16:30</option><option>17:00</option><option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option></select>
-                <svg class="select-arrow" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="#8695A9" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                <label for="depart-time" class="sr-only">Vertrektijd</label>
+                <select id="depart-time" name="park_from" aria-label="Vertrektijd">
+                  <option value="">Tijd</option>
+                  <option>00:00</option><option>00:30</option><option>01:00</option><option>01:30</option>
+                  <option>02:00</option><option>02:30</option><option>03:00</option><option>03:30</option>
+                  <option>04:00</option><option>04:30</option><option>05:00</option><option>05:30</option>
+                  <option>06:00</option><option>06:30</option><option>07:00</option><option>07:30</option>
+                  <option>08:00</option><option>08:30</option><option>09:00</option><option>09:30</option>
+                  <option>10:00</option><option>10:30</option><option>11:00</option><option>11:30</option>
+                  <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
+                  <option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option>
+                  <option>16:00</option><option>16:30</option><option>17:00</option><option>17:30</option>
+                  <option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option>
+                  <option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option>
+                  <option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 10 6" aria-hidden="true" focusable="false">
+                  <path d="M1 1l4 4 4-4" stroke="#8695A9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                </svg>
               </div>
             </div>
+
+            <!-- Return date -->
             <div class="form-field">
               <div class="input-icon-wrap">
-                <input type="text" name="qp-arrival-date" placeholder="Aankomstdatum" readonly>
-                <svg class="field-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#8695A9" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="#8695A9" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <label for="return-date" class="sr-only">Aankomstdatum</label>
+                <input type="date" id="return-date" name="out"
+                       aria-label="Aankomstdatum" autocomplete="off">
+                <svg class="field-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="#8695A9" stroke-width="1.5"/>
+                  <path d="M16 2v4M8 2v4M3 10h18" stroke="#8695A9" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
               </div>
             </div>
+
+            <!-- Return time -->
             <div class="form-field form-field-sm">
               <div class="input-select-wrap">
-                <select name="qp-arrival-time"><option value="">Tijd</option><option>00:00</option><option>00:30</option><option>01:00</option><option>01:30</option><option>02:00</option><option>02:30</option><option>03:00</option><option>03:30</option><option>04:00</option><option>04:30</option><option>05:00</option><option>05:30</option><option>06:00</option><option>06:30</option><option>07:00</option><option>07:30</option><option>08:00</option><option>08:30</option><option>09:00</option><option>09:30</option><option>10:00</option><option>10:30</option><option>11:00</option><option>11:30</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option><option>16:00</option><option>16:30</option><option>17:00</option><option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option></select>
-                <svg class="select-arrow" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="#8695A9" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                <label for="return-time" class="sr-only">Aankomsttijd</label>
+                <select id="return-time" name="park_to" aria-label="Aankomsttijd">
+                  <option value="">Tijd</option>
+                  <option>00:00</option><option>00:30</option><option>01:00</option><option>01:30</option>
+                  <option>02:00</option><option>02:30</option><option>03:00</option><option>03:30</option>
+                  <option>04:00</option><option>04:30</option><option>05:00</option><option>05:30</option>
+                  <option>06:00</option><option>06:30</option><option>07:00</option><option>07:30</option>
+                  <option>08:00</option><option>08:30</option><option>09:00</option><option>09:30</option>
+                  <option>10:00</option><option>10:30</option><option>11:00</option><option>11:30</option>
+                  <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
+                  <option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option>
+                  <option>16:00</option><option>16:30</option><option>17:00</option><option>17:30</option>
+                  <option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option>
+                  <option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option>
+                  <option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 10 6" aria-hidden="true" focusable="false">
+                  <path d="M1 1l4 4 4-4" stroke="#8695A9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                </svg>
               </div>
             </div>
+
             <div class="form-submit">
               <button type="submit" class="btn-orange">Bereken mijn prijs</button>
             </div>
+
           </div>
         </form>
       </div>
@@ -140,19 +261,27 @@
     </div>
     <div class="step-cards">
       <div class="step-card">
-        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol.jpg" alt="Ruime parkeervakken">
+        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol.jpg"
+             alt="Ruime parkeervakken op een volledig geasfalteerde parking"
+             width="400" height="300" loading="lazy">
         <p>Ruime parkeervakken op een volledig geasfalteerde parking</p>
       </div>
       <div class="step-card">
-        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2019/07/GreenParking-entree.jpg" alt="Laadplatform">
+        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2019/07/GreenParking-entree.jpg"
+             alt="Handig laadplatform en overdekte wachtruimte"
+             width="400" height="300" loading="lazy">
         <p>Handig laadplatform en overdekte wachtruimte</p>
       </div>
       <div class="step-card">
-        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2019/12/LOW-QuickParking-SPL-503-bewerkt.jpg" alt="Shuttle service">
+        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2019/12/LOW-QuickParking-SPL-503-bewerkt.jpg"
+             alt="Gratis shuttle service van en naar Schiphol"
+             width="400" height="300" loading="lazy">
         <p>Gratis shuttle service van en naar Schiphol</p>
       </div>
       <div class="step-card">
-        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2019/12/GreenParking-security.jpg" alt="24/7 bemand">
+        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2019/12/GreenParking-security.jpg"
+             alt="24/7 bemand en bewaakt parkeerterrein"
+             width="400" height="300" loading="lazy">
         <p>24/7 bemand en bewaakt parkeerterrein</p>
       </div>
     </div>
@@ -170,18 +299,68 @@
       <div class="advantages-list">
         <h2>De voordelen van GreenParking Schiphol</h2>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Goedkoper dan parkeren op Schiphol</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>2.500 geasfalteerde parkeerplekken</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>24/7 geopend op locatie</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Klantenservice 24/7 bereikbaar</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Gratis shuttlebus brengt je van/naar de terminal</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Handig bagage in- en uitlaadplatform</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Neem zelf je autosleutels mee</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Geen verborgen kosten na het boeken</li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+              <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Goedkoper dan parkeren op Schiphol
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+              <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            2.500 geasfalteerde parkeerplekken
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+              <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            24/7 geopend op locatie
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+              <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Klantenservice 24/7 bereikbaar
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+              <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Gratis shuttlebus brengt je van/naar de terminal
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+              <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Handig bagage in- en uitlaadplatform
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+              <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Neem zelf je autosleutels mee
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="24" height="24">
+              <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+              <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Geen verborgen kosten na het boeken
+          </li>
         </ul>
       </div>
       <div class="advantages-map">
-        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/04/illustratie-kaart-2.svg" alt="Kaart GreenParking Schiphol">
+        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/04/illustratie-kaart-2.svg"
+             alt="Kaart: GreenParking Schiphol op 10 minuten van de luchthaven"
+             width="420" height="360" loading="lazy">
       </div>
     </div>
   </div>
@@ -195,14 +374,16 @@
       <div class="testimonial">
         <blockquote>&ldquo;Net parkeerterrein. Makkelijk te vinden en te parkeren in brede vakken. Vlotte brengservice en ophaalservice van en naar Schiphol. Vooral de SMS bij aankomst op Schiphol met de tijden van de shuttlebus vond ik erg handig.&rdquo;</blockquote>
         <div class="testimonial-author">
-          <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/user.svg" alt="" width="50" height="50">
+          <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/user.svg"
+               alt="" role="presentation" width="50" height="50" loading="lazy">
           <span>Simone van Dongen</span>
         </div>
       </div>
       <div class="testimonial">
         <blockquote>&ldquo;Prima bereikbare locatie. Vriendelijke en behulpzame parkeerbeheerder op locatie, ook bij terugkomst laat op de avond. Geen gedoe met parkeerkaarten dankzij de kentekenherkenning.&rdquo;</blockquote>
         <div class="testimonial-author">
-          <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/user.svg" alt="" width="50" height="50">
+          <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/user.svg"
+               alt="" role="presentation" width="50" height="50" loading="lazy">
           <span>Bert van Straaten</span>
         </div>
       </div>
@@ -215,7 +396,9 @@
   <div class="container">
     <div class="shuttle-inner">
       <div class="shuttle-image">
-        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2019/07/GreenParking-reiziger.jpg" alt="Shuttle service GreenParking Schiphol">
+        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2019/07/GreenParking-reiziger.jpg"
+             alt="Reiziger onderweg naar de shuttle bus bij GreenParking Schiphol"
+             width="440" height="285" loading="lazy">
       </div>
       <div class="shuttle-text">
         <h3>24/7 Shuttle Service</h3>
@@ -246,7 +429,8 @@
   <div class="container">
     <div class="icon-cta-inner">
       <div class="icon-cta-img">
-        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/user.svg" alt="" width="125" height="125">
+        <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/user.svg"
+             alt="" role="presentation" width="125" height="125" loading="lazy">
       </div>
       <div class="icon-cta-text">
         <h2>Voordelig parkeren bij Schiphol? Reserveer bij GreenParking Schiphol!</h2>
@@ -259,31 +443,40 @@
 <!-- ===== FAQ ===== -->
 <section class="faq-section">
   <div class="container">
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+    <div class="faq-list" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
           Krijg ik direct een bevestiging van mijn reservering?
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#0D2C54" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#0D2C54" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10" stroke="#0D2C54" stroke-width="1.5"/>
+            <path d="M12 8v8M8 12h8" stroke="#0D2C54" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </button>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-1">
           <p>Ja, na het plaatsen van je reservering ontvang je direct een bevestiging per e-mail.</p>
         </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
           Moet ik mijn autosleutels afgeven bij GreenParking Schiphol?
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#0D2C54" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#0D2C54" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10" stroke="#0D2C54" stroke-width="1.5"/>
+            <path d="M12 8v8M8 12h8" stroke="#0D2C54" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </button>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-2">
           <p>Nee, bij GreenParking Schiphol neem je je autosleutels gewoon zelf mee.</p>
         </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
           Mag ik zelf kiezen waar ik mijn auto parkeer op de parkeerlocatie?
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#0D2C54" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#0D2C54" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10" stroke="#0D2C54" stroke-width="1.5"/>
+            <path d="M12 8v8M8 12h8" stroke="#0D2C54" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </button>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-3">
           <p>Ja, je mag op het terrein zelf een vrije parkeerplek kiezen.</p>
         </div>
       </div>
@@ -301,10 +494,34 @@
     <p class="bottom-cta-title">Check online beschikbaarheid en reserveer</p>
     <a href="reserveren.html" class="btn-orange-arrow">Reserveer mijn plek &#8594;</a>
     <ul class="bottom-usp">
-      <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>240.000 reizigers gingen jou voor</li>
-      <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>gratis 24/7 shuttlebussen</li>
-      <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>24/7 bemand met parkeerbeheerder</li>
-      <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>autosleutels neem je zelf mee</li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="22" height="22">
+          <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+          <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        240.000 reizigers gingen jou voor
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="22" height="22">
+          <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+          <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        gratis 24/7 shuttlebussen
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="22" height="22">
+          <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+          <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        24/7 bemand met parkeerbeheerder
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" width="22" height="22">
+          <circle cx="12" cy="12" r="10" stroke="#88BC24" stroke-width="2"/>
+          <path d="M7 12l3.5 3.5L17 8.5" stroke="#88BC24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        autosleutels neem je zelf mee
+      </li>
     </ul>
   </div>
 </section>
@@ -314,21 +531,23 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-left">
-        <a href="index.html">
-          <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/logo-dark-1.svg" alt="GreenParking Schiphol" width="105" height="50">
+        <a href="index.html" aria-label="GreenParking Schiphol — naar homepage">
+          <img src="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/logo-dark-1.svg"
+               alt="GreenParking Schiphol" width="105" height="50" loading="lazy">
         </a>
         <div class="footer-airport-wrap">
-          <select class="footer-airport-select">
+          <label for="footer-airport" class="sr-only">Selecteer luchthaven</label>
+          <select id="footer-airport" class="footer-airport-select" aria-label="Selecteer luchthaven">
             <option>Schiphol (AMS)</option>
           </select>
           <p>Ga naar een andere luchthaven</p>
         </div>
       </div>
-      <div class="footer-links">
+      <nav class="footer-links" aria-label="Footer navigatie">
         <a href="#">Algemene voorwaarden</a>
         <a href="#">Privacy</a>
         <a href="#">Webdesign</a>
-      </div>
+      </nav>
     </div>
   </div>
 </footer>

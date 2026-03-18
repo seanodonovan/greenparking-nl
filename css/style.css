@@ -24,6 +24,19 @@ img { display: block; max-width: 100%; height: auto; }
 ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
+/* Screen-reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ===== CONTAINER ===== */
 .container {
   max-width: 1200px;
@@ -32,10 +45,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ===== BUTTONS ===== */
+/*
+ * Accessibility note: white (#fff) on the brand orange (#FA7921) gives only
+ * ~2.7:1 contrast — below WCAG AA 4.5:1 for normal text.
+ * We use navy (#0D2C54) text on orange, which gives 5.3:1. ✓
+ */
 .btn-orange {
   display: inline-block;
   background: #FA7921;
-  color: #fff;
+  color: #0D2C54;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -51,7 +69,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .btn-orange-arrow {
   display: inline-block;
   background: #FA7921;
-  color: #fff;
+  color: #0D2C54;
   font-size: 14px;
   font-weight: 700;
   padding: 14px 28px;
@@ -72,10 +90,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .btn-navy:hover { background: #0a2244; text-decoration: none; }
 
+/*
+ * white on #88BC24 = 2.3:1 — fails. Use navy text (6.2:1). ✓
+ */
 .btn-green {
   display: inline-block;
   background: #88BC24;
-  color: #fff;
+  color: #0D2C54;
   font-size: 14px;
   font-weight: 700;
   padding: 14px 28px;
@@ -114,12 +135,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 0;
 }
 
+/* #8695A9 on white = 2.8:1 — fails. Use #5F6E80 (4.6:1). ✓ */
 .utility-nav li a {
   display: block;
   padding: 0 14px;
   font-size: 12px;
   font-weight: 500;
-  color: #8695A9;
+  color: #5F6E80;
   line-height: 35px;
   transition: color 0.2s;
 }
@@ -174,9 +196,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .main-nav ul li.nav-cta {
   margin-left: 8px;
 }
+/* Navy text on orange: 5.3:1 ✓ */
 .main-nav ul li.nav-cta a {
   background: #FA7921;
-  color: #fff;
+  color: #0D2C54;
   line-height: normal;
   padding: 11px 20px;
   border-radius: 4px;
@@ -218,11 +241,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 10px;
 }
 
+/* Navy on #88BC24 = 6.2:1 ✓ */
 .usp-list li {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #fff;
+  color: #0D2C54;
   font-size: 14px;
   font-weight: 600;
 }
@@ -335,7 +359,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: relative;
 }
 
-.input-icon-wrap input {
+.input-icon-wrap input,
+.input-icon-wrap input[type="date"] {
   width: 100%;
   height: 50px;
   padding: 0 40px 0 16px;
@@ -346,9 +371,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 14px;
   color: #0D2C54;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 .input-icon-wrap input::placeholder { color: #8695A9; }
-.input-icon-wrap input:focus { outline: 2px solid #88BC24; }
+.input-icon-wrap input:focus,
+.input-icon-wrap input[type="date"]:focus { outline: 2px solid #88BC24; outline-offset: 0; }
+
+/* Hide the browser's native calendar icon so our SVG shows cleanly */
+.input-icon-wrap input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 100%;
+}
+
+/* Colour the empty-state format hint (Chrome/Edge) */
+.input-icon-wrap input[type="date"]:not([value])::-webkit-datetime-edit {
+  color: #8695A9;
+}
 
 .field-icon {
   position: absolute;
@@ -598,10 +642,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex: 1;
 }
 
+/* Orange (#FA7921) on light blue (#EBF2FA) = 2.4:1 — fails. Use navy. ✓ */
 .shuttle-text h3 {
   font-size: 20px;
   font-weight: 700;
-  color: #FA7921;
+  color: #0D2C54;
   margin-bottom: 16px;
 }
 
@@ -630,10 +675,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex: 0 0 340px;
 }
 
+/* White on green = 2.3:1 — fails. Use navy (6.2:1). ✓ */
 .pricing-left h2 {
   font-size: 32px;
   font-weight: 700;
-  color: #fff;
+  color: #0D2C54;
   line-height: 1.2;
   margin-bottom: 20px;
 }
@@ -649,9 +695,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex: 1;
 }
 
+/* White on green fails. Navy passes. ✓ */
 .pricing-right p {
   font-size: 15px;
-  color: #fff;
+  color: #0D2C54;
   line-height: 1.7;
 }
 
@@ -698,11 +745,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1.7;
 }
 
+/* Orange (#FA7921) on white = 2.7:1 — fails. #C05500 on white = 4.6:1. ✓ */
 .icon-cta-text a {
-  color: #FA7921;
+  color: #C05500;
   font-weight: 600;
+  text-decoration: underline;
 }
-.icon-cta-text a:hover { text-decoration: underline; }
+.icon-cta-text a:hover { color: #9a4400; }
 
 /* ============================================================
    FAQ SECTION
@@ -859,9 +908,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   cursor: pointer;
 }
 
+/* #8695A9 on white = 2.8:1 fails. Use #5F6E80 (4.6:1). ✓ */
 .footer-airport-wrap p {
   font-size: 12px;
-  color: #8695A9;
+  color: #5F6E80;
 }
 
 .footer-links {
@@ -872,7 +922,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .footer-links a {
   font-size: 13px;
-  color: #8695A9;
+  color: #5F6E80;
   font-weight: 500;
   transition: color 0.2s;
 }
