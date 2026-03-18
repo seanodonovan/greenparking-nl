@@ -18,9 +18,112 @@
         href="https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol.jpg"
         fetchpriority="high">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Critical CSS inlined to eliminate render-blocking -->
+  <style>
+/* ===== RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:400;color:#0D2C54;background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+img{display:block;max-width:100%;height:auto}
+ul{list-style:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:#0D2C54;color:#fff;padding:8px 16px;font-weight:600;text-decoration:none;border-radius:0 0 4px 0}
+.skip-link:focus{left:0;top:0;width:auto;height:auto;overflow:visible;outline:3px solid #88BC24}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* ===== CONTAINER ===== */
+.container{max-width:1200px;margin:0 auto;padding:0 30px}
+/* ===== BUTTON (above fold) ===== */
+.btn-orange{display:inline-block;background:#FA7921;color:#0D2C54;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;padding:15px 22px;border-radius:4px;border:none;cursor:pointer;white-space:nowrap;transition:background 0.2s}
+.btn-orange:hover{background:#e06b15;text-decoration:none}
+/* ===== HEADER ===== */
+#header-outer{background:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+#header-secondary-outer{height:35px;border-bottom:1px solid #f0f0f0}
+#header-secondary-outer .container{display:flex;align-items:center;justify-content:flex-end;height:100%}
+.utility-nav{display:flex;align-items:center;gap:0}
+.utility-nav li a{display:block;padding:0 14px;font-size:12px;font-weight:500;color:#5F6E80;line-height:35px;transition:color 0.2s}
+.utility-nav li a:hover{color:#0D2C54;text-decoration:none}
+#top{height:83px}
+#top .container{height:100%}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:100%}
+#logo{display:flex;align-items:center;flex-shrink:0}
+#logo img{width:144px;height:68px;object-fit:contain}
+.main-nav ul{display:flex;align-items:center;gap:0}
+.main-nav ul li a{display:block;padding:0 16px;font-size:14px;font-weight:700;color:#0D2C54;line-height:83px;white-space:nowrap;transition:color 0.2s}
+.main-nav ul li a:hover{color:#88BC24;text-decoration:none}
+.main-nav ul li.nav-cta{margin-left:8px}
+.main-nav ul li.nav-cta a{background:#FA7921;color:#0D2C54;line-height:normal;padding:11px 20px;border-radius:4px;font-size:14px;font-weight:700;transition:background 0.2s}
+.main-nav ul li.nav-cta a:hover{background:#e06b15}
+.mobile-menu-toggle{display:none;flex-direction:column;gap:5px;padding:4px}
+.mobile-menu-toggle span{display:block;width:24px;height:2px;background:#0D2C54;border-radius:2px;transition:0.3s}
+/* ===== USP BAR ===== */
+.usp-bar{background:#88BC24;padding:20px 0}
+.usp-list{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.usp-list li{display:flex;align-items:center;gap:10px;color:#0D2C54;font-size:14px;font-weight:600}
+.usp-icon{width:24px;height:24px;flex-shrink:0}
+/* ===== HERO ===== */
+.hero-section{position:relative;min-height:553px;display:flex;flex-direction:column}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;z-index:0}
+.hero-content{position:relative;z-index:1;flex:1;display:flex;align-items:flex-start;padding-top:60px;padding-bottom:20px;min-height:320px}
+.hero-text-wrap{display:flex;align-items:flex-start;justify-content:space-between;width:100%}
+.hero-text h1{font-size:48px;font-weight:700;color:#fff;line-height:1.1;margin-bottom:8px;text-shadow:0 1px 3px rgba(0,0,0,0.3)}
+.hero-text p{font-size:18px;font-weight:400;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.3)}
+.hero-sticker{flex-shrink:0;margin-top:-10px}
+.hero-sticker img{width:158px;height:158px}
+/* ===== BOOKING BOX ===== */
+.booking-box-wrap{position:relative;z-index:2}
+.booking-box{background:#0D2C54;padding:30px 40px 35px;border-radius:0}
+.booking-box h2{color:#fff;font-size:18px;font-weight:700;margin-bottom:24px}
+.booking-form .form-row{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap}
+.form-field{flex:1;min-width:160px}
+.form-field.form-field-sm{flex:0 0 130px;min-width:130px}
+.input-icon-wrap{position:relative}
+.input-icon-wrap input,.input-icon-wrap input[type="date"]{width:100%;height:50px;padding:0 40px 0 16px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-family:'Montserrat',sans-serif;font-size:14px;color:#0D2C54;cursor:pointer;-webkit-appearance:none;appearance:none}
+.input-icon-wrap input::placeholder{color:#8695A9}
+.input-icon-wrap input:focus,.input-icon-wrap input[type="date"]:focus{outline:2px solid #88BC24;outline-offset:0}
+.input-icon-wrap input[type="date"]::-webkit-calendar-picker-indicator{opacity:0;cursor:pointer;position:absolute;right:0;top:0;width:44px;height:100%}
+.input-icon-wrap input[type="date"]:not([value])::-webkit-datetime-edit{color:#8695A9}
+.field-icon{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:18px;height:18px;pointer-events:none}
+.input-select-wrap{position:relative}
+.input-select-wrap select{width:100%;height:50px;padding:0 36px 0 16px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;font-family:'Montserrat',sans-serif;font-size:14px;color:#0D2C54;appearance:none;cursor:pointer}
+.input-select-wrap select:focus{outline:2px solid #88BC24}
+.select-arrow{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:14px;height:10px;pointer-events:none}
+.form-submit{flex-shrink:0}
+.form-submit .btn-orange{height:50px;padding:0 24px;font-size:14px;border-radius:4px;white-space:nowrap}
+/* ===== MOBILE RESPONSIVE (above-fold) ===== */
+@media(max-width:768px){
+  #header-secondary-outer{display:none}
+  .mobile-menu-toggle{display:flex}
+  .main-nav{display:none;position:absolute;top:83px;left:0;right:0;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.1);z-index:999}
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:0}
+  .main-nav ul li a{line-height:normal;padding:16px 20px;border-bottom:1px solid #f0f0f0;display:block}
+  .main-nav ul li.nav-cta{margin:16px}
+  .main-nav ul li.nav-cta a{line-height:normal;padding:14px 20px;text-align:center}
+  #top{position:relative}
+  .hero-text h1{font-size:32px}
+  .hero-text-wrap{flex-direction:column;gap:20px}
+  .hero-sticker{display:none}
+  .booking-box{padding:20px}
+  .booking-form .form-row{flex-direction:column}
+  .form-field,.form-field.form-field-sm{flex:none;width:100%}
+  .usp-list{gap:14px;flex-direction:column;align-items:flex-start}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+}
+  </style>
+
+  <!-- Fonts async (non-render-blocking) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"></noscript>
+
+  <!-- Full stylesheet async (non-render-blocking) -->
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+
+  
 
   <!-- SEO: LocalBusiness structured data -->
   <script type="application/ld+json">
