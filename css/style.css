@@ -285,13 +285,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background-repeat: no-repeat;
   z-index: 0;
 }
-
-@media (min-width: 769px) {
-  .hero-bg {
-    background-image: url('https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol-1024x683.jpg');
-  }
-}
-
 .hero-content {
   position: relative;
   z-index: 1;
