@@ -13,11 +13,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://greenparkingschiphol.nl" crossorigin>
 
-  <!-- Performance: preload the above-the-fold hero background image (LCP candidate) -->
-  <link rel="preload" as="image"
-        href="https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol.jpg"
-        fetchpriority="high">
-
   <!-- Critical CSS inlined to eliminate render-blocking -->
   <style>
 /* ===== RESET & BASE ===== */
@@ -63,7 +58,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .usp-list li{display:flex;align-items:center;gap:10px;color:#0D2C54;font-size:14px;font-weight:600}
 .usp-icon{width:24px;height:24px;flex-shrink:0}
 /* ===== HERO ===== */
-.hero-section{position:relative;min-height:553px;display:flex;flex-direction:column}
+.hero-section{position:relative;min-height:553px;display:flex;flex-direction:column;background:#0D2C54}
 .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;z-index:0}
 .hero-content{position:relative;z-index:1;flex:1;display:flex;align-items:flex-start;padding-top:60px;padding-bottom:20px;min-height:320px}
 .hero-text-wrap{display:flex;align-items:flex-start;justify-content:space-between;width:100%}
@@ -113,11 +108,13 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 @media(max-width:480px){
   .container{padding:0 16px}
 }
+/* ===== STEP CARD IMAGES (prevent CLS when style.css loads async) ===== */
+.step-card img{width:100%;height:195px;object-fit:cover;display:block;border-radius:4px 4px 0 0;margin-bottom:14px}
   </style>
 
   <!-- Fonts async (non-render-blocking) -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=optional"></noscript>
 
   <!-- Full stylesheet async (non-render-blocking) -->
   <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -243,8 +240,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 
 <!-- ===== HERO ===== -->
 <section class="hero-section" aria-label="Hero">
-  <div class="hero-bg" style="background-image: url('https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol.jpg');"
-       role="img" aria-label="Parkeerterrein GreenParking Schiphol"></div>
+  <div class="hero-bg" role="img" aria-label="Parkeerterrein GreenParking Schiphol"></div>
   <div class="hero-content">
     <div class="container">
       <div class="hero-text-wrap">
