@@ -70,11 +70,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ===== BUTTONS ===== */
-/*
- * Accessibility note: white (#fff) on the brand orange (#FA7921) gives only
- * ~2.7:1 contrast — below WCAG AA 4.5:1 for normal text.
- * We use navy (#0D2C54) text on orange, which gives 5.3:1. ✓
- */
 .btn-orange {
   display: inline-block;
   background: #FA7921;
@@ -115,9 +110,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .btn-navy:hover { background: #0a2244; text-decoration: none; }
 
-/*
- * white on #88BC24 = 2.3:1 — fails. Use navy text (6.2:1). ✓
- */
 .btn-green {
   display: inline-block;
   background: #88BC24;
@@ -141,7 +133,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-/* Utility bar */
 #header-secondary-outer {
   height: 35px;
   border-bottom: 1px solid #f0f0f0;
@@ -160,7 +151,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 0;
 }
 
-/* #8695A9 on white = 2.8:1 — fails. Use #5F6E80 (4.6:1). ✓ */
 .utility-nav li a {
   display: block;
   padding: 0 14px;
@@ -172,7 +162,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .utility-nav li a:hover { color: #0D2C54; text-decoration: none; }
 
-/* Main header */
 #top {
   height: 83px;
 }
@@ -199,7 +188,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   object-fit: contain;
 }
 
-/* Main navigation */
 .main-nav ul {
   display: flex;
   align-items: center;
@@ -221,7 +209,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .main-nav ul li.nav-cta {
   margin-left: 8px;
 }
-/* Navy text on orange: 5.3:1 ✓ */
 .main-nav ul li.nav-cta a {
   background: #FA7921;
   color: #0D2C54;
@@ -234,7 +221,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .main-nav ul li.nav-cta a:hover { background: #e06b15; }
 
-/* Mobile toggle */
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;
@@ -266,7 +252,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 10px;
 }
 
-/* Navy on #88BC24 = 6.2:1 ✓ */
 .usp-list li {
   display: flex;
   align-items: center;
@@ -299,6 +284,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
+}
+
+@media (min-width: 769px) {
+  .hero-bg {
+    background-image: url('https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol.jpg');
+  }
 }
 
 .hero-content {
@@ -344,7 +335,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: 158px;
 }
 
-/* Booking box */
 .booking-box-wrap {
   position: relative;
   z-index: 2;
@@ -403,7 +393,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .input-icon-wrap input:focus,
 .input-icon-wrap input[type="date"]:focus { outline: 2px solid #88BC24; outline-offset: 0; }
 
-/* Hide the browser's native calendar icon so our SVG shows cleanly */
 .input-icon-wrap input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
   cursor: pointer;
@@ -414,7 +403,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: 100%;
 }
 
-/* Colour the empty-state format hint (Chrome/Edge) */
 .input-icon-wrap input[type="date"]:not([value])::-webkit-datetime-edit {
   color: #8695A9;
 }
@@ -470,7 +458,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================================
-   ZO WERKT PARKEREN (HOW IT WORKS)
+   HOW IT WORKS
    ============================================================ */
 .how-it-works {
   background: #EBF2FA;
@@ -667,7 +655,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex: 1;
 }
 
-/* Orange (#FA7921) on light blue (#EBF2FA) = 2.4:1 — fails. Use navy. ✓ */
 .shuttle-text h3 {
   font-size: 20px;
   font-weight: 700;
@@ -700,7 +687,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex: 0 0 340px;
 }
 
-/* White on green = 2.3:1 — fails. Use navy (6.2:1). ✓ */
 .pricing-left h2 {
   font-size: 32px;
   font-weight: 700;
@@ -720,7 +706,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex: 1;
 }
 
-/* White on green fails. Navy passes. ✓ */
 .pricing-right p {
   font-size: 15px;
   color: #0D2C54;
@@ -770,7 +755,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1.7;
 }
 
-/* Orange (#FA7921) on white = 2.7:1 — fails. #C05500 on white = 4.6:1. ✓ */
 .icon-cta-text a {
   color: #C05500;
   font-weight: 600;
@@ -933,7 +917,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   cursor: pointer;
 }
 
-/* #8695A9 on white = 2.8:1 fails. Use #5F6E80 (4.6:1). ✓ */
 .footer-airport-wrap p {
   font-size: 12px;
   color: #5F6E80;
@@ -954,7 +937,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .footer-links a:hover { color: #0D2C54; text-decoration: none; }
 
 /* ============================================================
-   RESPONSIVE — TABLET
+   RESPONSIVE - TABLET
    ============================================================ */
 @media (max-width: 992px) {
   .step-cards {
@@ -993,7 +976,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================================
-   RESPONSIVE — MOBILE
+   RESPONSIVE - MOBILE
    ============================================================ */
 @media (max-width: 768px) {
   #header-secondary-outer {
