@@ -95,6 +95,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (departDateEl) departDateEl.min = todayStr;
     if (returnDateEl) returnDateEl.min = todayStr;
 
+    // Default departure to today, return to today+8
+    if (departDateEl) departDateEl.value = todayStr;
+    if (returnDateEl) {
+      var returnDefault = new Date();
+      returnDefault.setDate(returnDefault.getDate() + 8);
+      returnDateEl.value = formatDate(returnDefault);
+    }
+
     // When departure date changes: update return min and default +8 days
     if (departDateEl) {
       departDateEl.addEventListener('change', function() {
