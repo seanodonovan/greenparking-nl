@@ -12,8 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://greenparkingschiphol.nl">
-  <!-- Preload hero sticker so LCP element starts downloading at parse time -->
-  <link rel="preload" as="image" href="https://greenparkingschiphol.nl/wp-content/uploads/2020/09/sticker-10-min-rijden.svg">
+  <!-- Preload LCP image so it starts downloading at parse time -->
+  <link rel="preload" as="image" href="https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol.jpg">
 
   <!-- Critical CSS inlined to eliminate render-blocking -->
   <style>
@@ -373,7 +373,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       <div class="step-card">
         <img src="https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol.jpg"
              alt="Ruime parkeervakken op een volledig geasfalteerde parking"
-             width="400" height="300" loading="lazy">
+             width="400" height="300" fetchpriority="high">
         <p>Ruime parkeervakken op een volledig geasfalteerde parking</p>
       </div>
       <div class="step-card">
