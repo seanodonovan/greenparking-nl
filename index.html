@@ -11,10 +11,7 @@
   <!-- Performance: early connections to the image/font origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://greenparkingschiphol.nl" crossorigin>
-
-  <!-- Preload logo SVG (FCP element — above-fold, first content painted) -->
-  <link rel="preload" as="image" href="https://greenparkingschiphol.nl/wp-content/uploads/2018/02/logo-dark-1.svg" fetchpriority="high">
+  <link rel="preconnect" href="https://greenparkingschiphol.nl">
 
   <!-- Critical CSS inlined to eliminate render-blocking -->
   <style>
@@ -255,7 +252,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
           <!-- fetchpriority="high" because this is above the fold -->
           <img src="https://greenparkingschiphol.nl/wp-content/uploads/2020/09/sticker-10-min-rijden.svg"
                alt="Ideale parkeerlocatie 10 minuten van Schiphol"
-               width="158" height="158" fetchpriority="high">
+               width="158" height="158" fetchpriority="low">
         </div>
       </div>
     </div>
