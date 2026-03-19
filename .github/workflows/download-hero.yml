@@ -1,0 +1,28 @@
+name: Download and commit hero image
+
+on:
+  workflow_dispatch:
+
+jobs:
+  download-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download hero image
+        run: |
+          mkdir -p images
+          curl -L "https://greenparkingschiphol.nl/wp-content/uploads/2019/02/Parkeerplaats3_GreenParkingSchiphol-1024x683.jpg" \
+            -o images/hero-1024x683.jpg \
+            --fail --silent --show-error
+          ls -lh images/hero-1024x683.jpg
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add images/hero-1024x683.jpg
+          git commit -m "Add self-hosted hero image via GitHub Actions"
+          git push
